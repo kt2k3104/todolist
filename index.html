@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="side-bar">
+        <div class="header">.Tu đu lít</div>
+        <div class="side-bar-item">
+          <i class="fa-solid fa-house"></i>
+          <h2>Overview</h2>
+        </div>
+        <div class="side-bar-item">
+          <i class="fa-solid fa-monument"></i>
+          <h2>Start</h2>
+        </div>
+        <div class="side-bar-item">
+          <i class="fa-regular fa-folder-open"></i>
+          <h2>Project</h2>
+        </div>
+        <div class="side-bar-item">
+          <i class="fa-regular fa-comment-dots"></i>
+          <h2>Chat</h2>
+        </div>
+        <div class="side-bar-item">
+          <i class="fa-regular fa-calendar-days"></i>
+          <h2>Calendar</h2>
+        </div>
+        <div class="side-bar-item mt">
+          <i class="fa-solid fa-gears"></i>
+          <h2>setting</h2>
+        </div>
+        <div class="side-bar-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <h2>logout</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="nav">
+          <div class="nav-left">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="nav-right">
+            <div class="nav-right-ask">
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div class="nav-right-noti"><i class="fa-solid fa-bell"></i></div>
+            <div class="nav-right-user">
+              <h2>Khai</h2>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="nav-right-avt">
+              <i class="fa-regular fa-circle-user"></i>
+            </div>
+          </div>
+        </div>
+        <div class="container-content">
+          <div class="container-content-header">
+            <h1>Project</h1>
+            <div class="container-content-header_right">
+              <h2>This Week</h2>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="menu">
+            <div class="content" id="todo" data-status="1">
+              <div class="content-name">
+                <h2>To do</h2>
+                <p>0</p>
+              </div>
+              <div class="content-add"><i class="fa-solid fa-plus"></i></div>
+              <div class="showContent"></div>
+            </div>
+            <div class="content displayNone" id="inProgress" data-status="2">
+              <div class="content-name">
+                <h2>In Proress</h2>
+                <p>0</p>
+              </div>
+              <div class="content-add"><i class="fa-solid fa-plus"></i></div>
+              <div class="showContent"></div>
+            </div>
+            <div class="content displayNone" id="completed" data-status="3">
+              <div class="content-name">
+                <h2>Completed</h2>
+                <p>0</p>
+              </div>
+              <div class="content-add"><i class="fa-solid fa-plus"></i></div>
+              <div class="showContent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="addcontent">
+      <div class="model">
+        <div class="addcontent-header">
+          <h1>Today</h1>
+        </div>
+        <form action="" class="form-1" id="form-1">
+          <div class="addcontent-input">
+            <input type="text" placeholder="Title" name="title" />
+            <textarea
+              name="content"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Content"
+            ></textarea>
+          </div>
+          <div class="addcontent-option">
+            <input type="radio" id="todo" name="status" value="1" />
+            <label for="todo">To do</label>
+            <input type="radio" id="inProgress" name="status" value="2" />
+            <label for="inProgress">In Progress</label>
+            <input type="radio" id="completed" name="status" value="3" />
+            <label for="completed">Completed</label>
+          </div>
+          <div class="addcontent-day">
+            <input type="date" name="day" />
+          </div>
+          <div class="addcontent-send">
+            <button type="submit" class="addtask">Add task</button>
+            <button type="button" class="cancel">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-list-1">
+        <i class="fa-solid fa-list"></i>
+        <h4>Todo</h4>
+      </div>
+      <div class="footer-list-2">
+        <i class="fa-solid fa-list-ol"></i>
+        <h4>Progress</h4>
+      </div>
+      <div class="footer-list-3">
+        <i class="fa-solid fa-list-check"></i>
+        <h4>Completed</h4>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
